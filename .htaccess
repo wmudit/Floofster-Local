@@ -1,0 +1,10 @@
+Options -Multiviews
+Options +FollowSymlinks
+RewriteEngine on
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
+#RewriteRule ^(.*)\.html$ $1.php [nc]
+
+RewriteRule ^([a-zA-Z0-9_-]+)$ post.php?id=$1
+RewriteRule ^([a-zA-Z0-9_-]+)/$ post.php?id=$1
